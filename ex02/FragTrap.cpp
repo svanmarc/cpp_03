@@ -6,7 +6,7 @@
 /*   By: svanmarc <@student.42perpignan.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 18:36:01 by svanmarc          #+#    #+#             */
-/*   Updated: 2024/02/28 18:45:21 by svanmarc         ###   ########.fr       */
+/*   Updated: 2024/02/28 18:50:29 by svanmarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,10 @@ FragTrap &FragTrap::operator=(FragTrap const &rhs)
 
 void FragTrap::highFivesGuys(void)
 {
-    std::cout << "FragTrap " << this->name << " give me hight fives guys" << std::endl;
+    std::cout << "FragTrap " << this->name << " give me a hight fives guys!!!!" << std::endl;
 }
 
 void FragTrap::attack(std::string const &target)
 {
-    std::cout << "FragTrap " << this->name << " attack " << target << " causing " << attackDamage << " points of damage!" << std::endl;
+    std::cout << "FragTrap " << this->name << " attack " << target << " causing " << this->attackDamage << " points of damage!" << std::endl;
 }
