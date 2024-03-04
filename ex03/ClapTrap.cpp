@@ -6,13 +6,13 @@
 /*   By: svanmarc <@student.42perpignan.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:52:18 by svanmarc          #+#    #+#             */
-/*   Updated: 2024/03/04 10:47:24 by svanmarc         ###   ########.fr       */
+/*   Updated: 2024/03/04 10:53:50 by svanmarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : name("ClapTrap"), hitPoints(10), energyPoints(10), attackDamage(0)
+ClapTrap::ClapTrap() : name("ClapDefault"), hitPoints(10), energyPoints(10), attackDamage(0)
 {
     std::cout << "ClapTrap " << name << " is created" << std::endl;
 }
@@ -73,7 +73,20 @@ unsigned int ClapTrap::getEnergyPoints(void) const
 unsigned int ClapTrap::getAttackDamage(void) const
 {
     return attackDamage;
+}
+
+void ClapTrap::setEnergyPoints(unsigned int energyPoints)
+{
+    this->energyPoints = energyPoints;
+}
+
+void ClapTrap::setHitPoints(unsigned int hitPoints)
+{
+    this->hitPoints = hitPoints;
+}
+
+void ClapTrap::setAttackDamage(unsigned int attackDamage)
+{
+    this->attackDamage = attackDamage;
 }*/
-
-
 

@@ -6,7 +6,7 @@
 /*   By: svanmarc <@student.42perpignan.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:52:22 by svanmarc          #+#    #+#             */
-/*   Updated: 2024/03/04 10:46:29 by svanmarc         ###   ########.fr       */
+/*   Updated: 2024/03/04 10:54:11 by svanmarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,12 @@ public:
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 
-  /*unsigned int getHitPoints(void) const;
+/*
+    unsigned int getHitPoints(void) const;
     unsigned int getEnergyPoints(void) const;
-    unsigned int getAttackDamage(void) const;*/
-
-private:
+    unsigned int getAttackDamage(void) const;
+*/
+protected:
     std::string name;
     unsigned int hitPoints;
     unsigned int energyPoints;

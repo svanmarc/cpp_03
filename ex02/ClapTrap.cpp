@@ -6,26 +6,20 @@
 /*   By: svanmarc <@student.42perpignan.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/28 17:52:18 by svanmarc          #+#    #+#             */
-/*   Updated: 2024/02/28 18:39:22 by svanmarc         ###   ########.fr       */
+/*   Updated: 2024/03/04 10:52:25 by svanmarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : name("ClapTrap")
+ClapTrap::ClapTrap() : name("ClapTrap"), hitPoints(10), energyPoints(10), attackDamage(0)
 {
-    hitPoints = 10;
-    energyPoints = 10;
-    attackDamage = 0;
     std::cout << "ClapTrap " << name << " is created" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : name(name)
+ClapTrap::ClapTrap(std::string name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)
 {
-    this->hitPoints = 10;
-    this->energyPoints = 10;
-    this->attackDamage = 0;
-    std::cout << "ClapTrap " << this->name << " is created" << std::endl;
+    std::cout << "ClapTrap " << name << " is created" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &src)
@@ -52,7 +46,7 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &rhs)
 
 void ClapTrap::attack(std::string const &target)
 {
-    std::cout << "ClapTrap " << this->name << " attack " << target << " causing " << this->attackDamage << " points of damage!" << std::endl;
+    std::cout << "ClapTrap " << name << " attack " << target << " causing " << attackDamage << " points of damage!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
@@ -64,4 +58,20 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
     std::cout << "ClapTrap " << name << " is repaired of " << amount << " points of damage!" << std::endl;
 }
+
+/*
+unsigned int ClapTrap::getHitPoints(void) const
+{
+    return hitPoints;
+}
+
+unsigned int ClapTrap::getEnergyPoints(void) const
+{
+    return energyPoints;
+}
+
+unsigned int ClapTrap::getAttackDamage(void) const
+{
+    return attackDamage;
+}*/
 
